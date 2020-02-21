@@ -7,7 +7,9 @@ import pic04 from './images/pic04.jpg'
 import pic05 from './images/pic05.jpg'
 
 
-for (let i = 0; i < 5; i++){
+for (let i = 0; i < 1; i++){
+
+  loadImages(('0' + i));
 
 }
 
@@ -35,9 +37,10 @@ hrefParent.insertBefore(theImage(), aHref)
 
 }
 
-loadImages('01');
 
-function card1(){
+
+
+/*function card1(){
 
 	const cardFirst = document.createElement('span');
     
@@ -55,4 +58,4 @@ function card1(){
 let aHref = document.getElementById("FirstHref");
 let hrefParent = aHref.parentNode;
 
-hrefParent.insertBefore(card1(), aHref)
+hrefParent.insertBefore(card1(), aHref)*/
