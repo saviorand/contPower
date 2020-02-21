@@ -3,10 +3,148 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Title</title>
+    <title>My cool blog</title>
   </head>
   <body>
-    <div class="text-red-500 text-md">Test Input</div>
+
+    <!-- Wrapper -->
+
+    <div id="wrapper">
+
+      <!-- Header -->
+
+      <header id="header">
+        <div class="inner bg-gray-200">
+
+          <!-- Logo here -->
+
+          <a href="" class="logo">
+            <span class="title">Logo here</span>
+          </a>
+
+        </div>
+
+      </header>
+
+      <!-- Navbar -->
+
+      <nav id="navbar" class="flex-col text-center bg-gray-200">
+        <ul class="flex justify-center">
+          <li class="p-1"><a href="">Home</a></li>
+          <li class="p-1"><a href="">Posts</a></li>
+          <li class="p-1"><a href="">About us</a></li>
+          <li class="p-1"><a href="">Contacts</a></li>
+        </ul>
+      </nav>
+
+      <!-- Main section -->
+
+      <div id="main">
+        <div class="inner flex-col">
+          <header>
+            <h1 class="text-4xl text-center">My musings and thoughts</h1>
+            <p class="max-w-lg text-md p-4 m-auto">This is my blog. I write about stuff and things. Donec rhoncus lacus ut ex suscipit aliquam. Etiam aliquam volutpat lorem nec</p>
+          </header>
+          <section class="cards grid grid-cols-1 md:grid-cols-3 max-w-2xl mx-auto mb-16 mt-8 gap-8">
+            <article class="first relative" id="FirstCard">
+              <a href="#" id="FirstHref">
+                <div class="absolute top-0 my-16 mx-2">
+                <h2>First post</h2>
+                <div class="content">
+                  <p> lorem nec sollicitudin. Cras auctor, turpis non dapibus venenatis </p>
+                </div>
+              </div>
+              </a>
+            </article>
+            <article class="second relative" id="SecondCard">
+              <a href="#" id="SecondHref">
+                <div class="absolute top-0 my-16 mx-2">
+                <h2>Second post</h2>
+                <div class="content">
+                  <p> lorem nec sollicitudin. Cras auctor, turpis non dapibus venenatis </p>
+                </div>
+              </div>
+              </a>
+            </article>
+            <article class="third">
+              <span class="image">
+                <img src="" alt="" />
+              </span>
+              <a href="#">
+                <h2>Third post</h2>
+                <div class="content">
+                  <p> lorem nec sollicitudin. Cras auctor, turpis non dapibus venenatis </p>
+                </div>
+              </a>
+            </article>
+            <article class="fourth">
+              <span class="image">
+                <img src="" alt="" />
+              </span>
+              <a href="#">
+                <h2>Fourth post</h2>
+                <div class="content">
+                  <p> lorem nec sollicitudin. Cras auctor, turpis non dapibus venenatis </p>
+                </div>
+              </a>
+            </article>
+            <article class="fifth">
+              <span class="image">
+                <img src="" alt="" />
+              </span>
+              <a href="#">
+                <h2>Fifth post</h2>
+                <div class="content">
+                  <p> lorem nec sollicitudin. Cras auctor, turpis non dapibus venenatis </p>
+                </div>
+              </a>
+            </article>
+            <article class="sixth">
+              <span class="image">
+                <img src="" alt="" />
+              </span>
+              <a href="#">
+                <h2>Sixth post</h2>
+                <div class="content">
+                  <p> lorem nec sollicitudin. Cras auctor, turpis non dapibus venenatis </p>
+                </div>
+              </a>
+            </article>
+          </section>
+        </div>
+      </div>
+
+      <!-- Footer -->
+
+      <footer id="footer">
+        <div class="inner flex justify-between bg-gray-200">
+
+          <section class="p-2">
+            <h2>Sign up for updates</h2>
+            <form method="post" action="#">
+              <div class="fields">
+                <div class="field"><input type="email" name="email" id="email" placeholder="you@rgre.at"></div>
+              </div>
+              <ul class="buttons"><li><input type="submit" value="Send" class="primary" /></li></ul>
+            </form>
+          </section>
+          <section class="p-2">
+            <h2>Social medias</h2>
+            <ul class="social flex">
+              <li><a href="" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+              <li><a href="" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+              <li><a href="" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+            </ul>
+          </section>
+          <ul class="copyrighted p-2">
+            <li>Copyright, Flare</li>
+          </ul>
+
+        </div>
+        
+      </footer>
+
+    </div>
 
     <!-- Where webpack will output to -->
     <script src="bundle.js"></script>

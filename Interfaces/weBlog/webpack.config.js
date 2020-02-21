@@ -14,7 +14,13 @@ module.exports = {
         use: [
           "style-loader",
           { loader: "css-loader", options: { importLoaders: 1 } },
-          "postcss-loader",
+          "postcss-loader", 
+        ],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        use: [
+        "url-loader",
         ],
       },
     ],
