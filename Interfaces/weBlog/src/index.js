@@ -1,17 +1,12 @@
 import "./styles.css";
-import Berg from './images/berg.jpg';
-import pic01 from './images/pic01.jpg'
-import pic02 from './images/pic02.jpg'
-import pic03 from './images/pic03.jpg'
-import pic04 from './images/pic04.jpg'
-import pic05 from './images/pic05.jpg'
+import pic01 from './images/berg.jpg';
+import pic02 from './images/pic01.jpg'
+import pic03 from './images/pic02.jpg'
+import pic04 from './images/pic03.jpg'
+import pic05 from './images/pic04.jpg'
+import pic06 from './images/pic05.jpg'
 
-
-for (let i = 0; i < 1; i++){
-
-  loadImages(('0' + i));
-
-}
+const picArray = [pic01, pic02, pic03, pic04, pic05, pic06];
 
 function loadImages(number){
 
@@ -22,7 +17,7 @@ function loadImages(number){
     cardImage.className = "opacity-25";
 
 	const myImage = new Image();
-	myImage.src = pic01;
+	myImage.src = picArray[number - 1];
 	myImage.className = "block"
 
 	cardImage.appendChild(myImage);
@@ -30,12 +25,23 @@ function loadImages(number){
 	return cardImage;
 }
 
-let aHref = document.getElementById("SecondHref");
+let aHref = document.getElementById(("Href0" + number));
 let hrefParent = aHref.parentNode;
 
 hrefParent.insertBefore(theImage(), aHref)
 
 }
+
+
+
+for (let i = 1; i < 7; i++){
+
+  loadImages(i);
+
+}
+
+
+
 
 
 
