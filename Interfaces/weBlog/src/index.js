@@ -17,6 +17,36 @@ function loadImages(number){
 
    function theImage(){
 
+   	// Wrapper 
+
+    const postWrapper = document.createElement('article');
+
+    const postHref = document.createElement('a');
+
+    postWrapper.appendChild(postHref)
+
+
+    // Post preview
+
+
+    const postPreview = document.createElement('div');
+
+    const previewHeading = document.createElement('h2');
+
+    const previewParagraph = document.createElement('p');
+
+    previewParagraph.setIn
+
+
+    postPreview.appendChild(previewHeading);
+    postPreview.appendChild(previewParagraph);
+
+    postHref.appendChild(postPreview);
+
+
+
+   	// Image span
+
 	const cardImage = document.createElement('span');
     
     cardImage.className = "opacity-25";
@@ -27,15 +57,42 @@ function loadImages(number){
 
 	cardImage.appendChild(myImage);
 
-	return cardImage;
+	postHref.appendChild(cardImage);
+
+
+
+
+
+	return postArticle;
+
+
 }
 
-let aHref = document.getElementById("SecondHref");
-let hrefParent = aHref.parentNode;
 
-hrefParent.insertBefore(theImage(), aHref)
 
 }
+
+
+/*<article class="second relative" id="SecondCard">
+              <a href="#" id="SecondHref">
+                <div class="absolute top-0 my-16 mx-2">
+                <h2>Second post</h2>
+                <div class="content">
+                </div>
+              </div>
+              </a>
+            </article>*/
+
+
+
+
+
+
+
+
+
+
+
 
 
 
