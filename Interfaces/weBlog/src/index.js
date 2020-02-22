@@ -1,4 +1,9 @@
 import "./styles.css";
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/regular';
+import '@fortawesome/fontawesome-free/js/brands';
+
 import pic01 from './images/berg.jpg';
 import pic02 from './images/pic01.jpg'
 import pic03 from './images/pic02.jpg'
