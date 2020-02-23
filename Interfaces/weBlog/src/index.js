@@ -5,11 +5,16 @@ import '@fortawesome/fontawesome-free/js/regular';
 import '@fortawesome/fontawesome-free/js/brands';
 
 import pic01 from './images/berg.jpg';
-import pic02 from './images/pic01.jpg'
-import pic03 from './images/pic02.jpg'
-import pic04 from './images/pic03.jpg'
-import pic05 from './images/pic04.jpg'
-import pic06 from './images/pic05.jpg'
+import pic02 from './images/pic01.jpg';
+import pic03 from './images/pic02.jpg';
+import pic04 from './images/pic03.jpg';
+import pic05 from './images/pic04.jpg';
+import pic06 from './images/pic05.jpg';
+
+import pic13 from './images/pic13.jpg';
+
+
+// Loading images for post gallery
 
 const picArray = [pic01, pic02, pic03, pic04, pic05, pic06];
 
@@ -46,27 +51,16 @@ for (let i = 1; i < 7; i++){
 }
 
 
+/* Loading post cover image
 
 
+function appendCover() {
 
+	const homebtn = document.createElement('button');
 
+	homebtn.innerHTML = 'Home';
+	homebtn.onclick =  window.location.href = './'
 
-/*function card1(){
+} */
 
-	const cardFirst = document.createElement('span');
-    
-    cardFirst.className = "opacity-25";
-
-	const myBerg = new Image();
-	myBerg.src = Berg;
-	myBerg.className = "block"
-
-	cardFirst.appendChild(myBerg);
-
-	return cardFirst;
-}
-
-let aHref = document.getElementById("FirstHref");
-let hrefParent = aHref.parentNode;
-
-hrefParent.insertBefore(card1(), aHref)*/
+         

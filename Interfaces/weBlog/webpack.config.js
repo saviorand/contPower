@@ -1,10 +1,35 @@
-const path = require("path")
+const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const LinkTypePlugin = require('html-webpack-link-type-plugin').HtmlWebpackLinkTypePlugin;
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: {
+    app: "./src/index.js",
+    page: "./src/page.js",
+  },
+  plugins: [
+
+  new HtmlWebpackPlugin({
+    title: "Index",
+    inject: false,
+    chunks: ['app'],
+    template: "dist/index.html",
+  }),
+
+  new HtmlWebpackPlugin({
+    title: "Page",
+    inject: false,
+    template: "dist/page.html",
+    chunks: ['page'],
+    filename: "dist/postPage.html",
+
+  }),
+  new LinkTypePlugin()
+
+  ],
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    filename: "[name].bundle.js",
   },
 
   module: {
