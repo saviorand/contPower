@@ -51,6 +51,10 @@ for (let i = 1; i < 7; i++){
 }
 
 
+window.onload = () => {
+	document.body.className = "block";
+};
+
 /* Loading post cover image
 
 

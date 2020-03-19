@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My cool blog</title>
+
+
+  </head>
+  <body class="hidden">
+
+    <!-- Wrapper -->
+
+    <div id="wrapper">
+
+      <!-- Header -->
+
+    <header id="header">
+      <div class="inner flex justify-start bg-gray-300">
+
+          <!-- Logo here 
+
+          <a href="" class="logo">
+            <span class="title">Logo here</span>
+          </a> -->
+
+          <!-- Navbar -->
+
+        <nav id="navbar" class="inline-flex">
+          <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l">
+          Home
+          </button>
+          <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r">
+          About
+          </button>
+        </nav>
+
+      </div>
+
+
+
+      </header>
+
+      
+
+      <!-- Main section -->
+
+      <div id="main">
+        <div class="inner flex-col">
+          <header>
+            <div class="inner mt-8 mb-8">
+            <h1 class="text-4xl text-center">My musings and thoughts</h1>
+            <p class="max-w-lg text-md p-4 m-auto">This is my blog. I write about stuff and things. Donec rhoncus lacus ut ex suscipit aliquam. Etiam aliquam volutpat lorem nec</p>
+          </div>
+          </header>
+          <section class="cards grid grid-cols-1 md:grid-cols-3 max-w-2xl mx-auto mb-16 mt-16 gap-8">
+            <article class="first relative rounded shadow" id="FirstCard">
+              <a href="./page.html" id="Href01">
+                <div class="absolute top-0 my-16 mx-2">
+                <h2 class="text-xl">First post</h2>
+                <div class="content">
+                  <p> lorem nec sollicitudin. Cras auctor, turpis non dapibus venenatis...<i class="fas fa-long-arrow-alt-right text-blue-600"></i></p>
+                </div>
+              </div>
+              </a>
+            </article>
+            <article class="second relative rounded shadow" id="SecondCard">
+              <a href="#" id="Href02">
+                <div class="absolute top-0 my-16 mx-2">
+                <h2 class="text-xl">Second post</h2>
+                <div class="content">
+                  <p> lorem nec sollicitudin. Cras auctor, turpis non dapibus venenatis...<i class="fas fa-long-arrow-alt-right text-blue-600"></i></p>
+                </div>
+              </div>
+              </a>
+            </article>
+            <article class="third relative rounded shadow" id="ThirdCard">
+              <a href="#" id="Href03">
+                <div class="absolute top-0 my-16 mx-2">
+                <h2 class="text-xl">Third post</h2>
+                <div class="content">
+                  <p> lorem nec sollicitudin. Cras auctor, turpis non dapibus venenatis...<i class="fas fa-long-arrow-alt-right text-blue-600"></i></p>
+                </div>
+              </div>
+              </a>
+            </article>
+            <article class="fourth relative rounded shadow" id="FourthCard">
+              <a href="#" id="Href04">
+                <div class="absolute top-0 my-16 mx-2">
+                <h2 class="text-xl">Fourth post</h2>
+                <div class="content">
+                  <p> lorem nec sollicitudin. Cras auctor, turpis non dapibus venenatis...<i class="fas fa-long-arrow-alt-right text-blue-600"></i></p>
+                </div>
+              </div>
+              </a>
+            </article>
+            <article class="fifth relative rounded shadow" id="FifthCard">
+              <a href="#" id="Href05">
+                <div class="absolute top-0 my-16 mx-2">
+                <h2 class="text-xl">Fifth post</h2>
+                <div class="content">
+                  <p> lorem nec sollicitudin. Cras auctor, turpis non dapibus venenatis...<i class="fas fa-long-arrow-alt-right text-blue-600"></i></p>
+                </div>
+              </div>
+              </a>
+            </article>
+            <article class="sixth relative rounded shadow" id="SixthCard">
+              <a href="#" id="Href06">
+                <div class="absolute top-0 my-16 mx-2">
+                <h2 class="text-xl">Sixth post</h2>
+                <div class="content">
+                  <p> lorem nec sollicitudin. Cras auctor, turpis non dapibus venenatis...<i class="fas fa-long-arrow-alt-right text-blue-600"></i></p>
+                </div>
+              </div>
+              </a>
+            </article>
+
+            <!-- Paginator -->
+
+            <div class="bg-gray-100 md:col-span-3 h-12 flex items-center justify-center rounded shadow">
+             <a href="#" id="paginator">
+             <h2 class="text-xl font-bold">Load more posts<i class="fas fa-long-arrow-alt-right text-blue-600 mx-4"></i></h2>
+             </a>
+            </div>
+          
+          </section>
+
+        </div>
+      </div>
+
+      
+
+      <!-- Footer -->
+
+      <footer id="footer">
+        <div class="inner flex justify-center items-center bg-gray-300">
+          <section class="inline-flex flex-wrap">
+            <form class="w-full max-w-sm">
+          <div class="flex items-center border-b border-b-2 border-teal-500 py-2">
+          <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Jane Doe" aria-label="Full name">
+          <button class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
+          Get updates
+          </button>
+          </div>
+          </form>
+          </section>
+
+        </div>
+        
+      </footer>
+
+    </div>
+
+    <!-- Misc
+          <ul class="copyrighted inline-flex">
+            <li>Copyright, Flare</li>
+          </ul>
+           -->
+    <!-- Where webpack will output to -->
+    <script src="app.bundle.js"></script>
+  </body>
+</html>

@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const LinkTypePlugin = require('html-webpack-link-type-plugin').HtmlWebpackLinkTypePlugin;
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: {
@@ -8,23 +9,27 @@ module.exports = {
     page: "./src/page.js",
   },
   plugins: [
+  new MiniCssExtractPlugin({
+      filename: "styles.css",
+      chunkFilename: "styles.css"
+    }),
 
   new HtmlWebpackPlugin({
     title: "Index",
-    inject: false,
+    inject: 'head',
     chunks: ['app'],
-    template: "dist/index.html",
+    template: "dist/indexTemplate.html",
   }),
 
   new HtmlWebpackPlugin({
     title: "Page",
-    inject: false,
-    template: "dist/page.html",
+    inject: 'head',
+    template: "dist/pageTemplate.html",
     chunks: ['page'],
-    filename: "dist/postPage.html",
+    filename: "page.html",
 
   }),
-  new LinkTypePlugin()
+  new LinkTypePlugin(),
 
   ],
   output: {
