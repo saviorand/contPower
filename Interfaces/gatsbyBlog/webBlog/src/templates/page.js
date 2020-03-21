@@ -14,28 +14,42 @@ import PostBody from "../components/PostBody";
 
 
 
-export default ({ data }) => (
+class Page extends React.Component {
+
+  render() {
+
+    const post = this.props.data.mongodbTestPosts;
+
+
+    return (
+
   <div>
-  <Header headerText={'Hello world'}/>
-  <PostBody postContents={data.allMongodbTestPosts.edges.map(({ node }, index) => (<div dangerouslySetInnerHTML={{ __html: node.content }} />))}/>
+  <Header />
+  <PostBody headerText={post.heading} postContents={post.content.childMarkdownRemark.html} postLead={post.lead} postAuthor={post.author}/>
   <NextPage />
   <Footer />
   </div>
 
-)
 
-export const query = graphql `{
-  allMongodbTestPosts {
-    edges {
-      node {
-        id
-        content
+  )
+ }
+}
+
+export default Page
+
+
+export const pageQuery = graphql`
+  query($id: String!) {
+    mongodbTestPosts(id: { eq: $id }) {
+      id
+      heading
+      lead
+      content {
+      childMarkdownRemark {
+        html
       }
     }
-  }
-  site(siteMetadata: {}) {
-    siteMetadata {
-      title
+      author
     }
   }
-}`
+`

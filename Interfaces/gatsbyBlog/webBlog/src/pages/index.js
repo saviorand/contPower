@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import { graphql } from "gatsby";
 import "../styles.css";
 
@@ -10,25 +9,46 @@ import '@fortawesome/fontawesome-free/js/brands';
 
 import Header from "../components/header";
 import Footer from "../components/footer";
-import PostGallery from "../components/PostGallery";
 import NextPage from "../components/NextPage";
+import PostGallery from "../components/PostGallery";
+import Bio from "../components/Bio"
 
-export default ({ data }) => (
+class Index extends React.Component {
+
+  render() {
+
+   const { allMongodbTestPosts } = this.props.data
+
+   return (
+
   <div>
-  <Header/>
-  <PostGallery headerText={data.site.siteMetadata.title}/>
+  <Header />
+  <Bio />
+  <PostGallery postList={allMongodbTestPosts.edges}/>
   <NextPage />
   <Footer />
    </div>
+  ) 
+ }
+}
 
-)
+export default Index
 
-export const query = graphql`
+export const pageQuery = graphql`
   query {
-    site {
-      siteMetadata {
-        title
+  allMongodbTestPosts {
+    edges {
+      node {
+        author
+        content {
+          childMarkdownRemark {
+            html
+          }
+        }
+        heading
+        id
+        lead
       }
     }
   }
-`
+}`

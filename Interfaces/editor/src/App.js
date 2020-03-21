@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <Editor />
-    <div id="preview" className="text-center border"></div>
+    <div id="preview"></div>
     </div>
   );
 }
